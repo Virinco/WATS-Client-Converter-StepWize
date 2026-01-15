@@ -13,6 +13,14 @@ namespace StepWize
     public class ConverterTest : TDM
     {
         [TestMethod]
+        public void SetupClient()
+        {
+            SetupAPI(null, "location", "purpose", true);
+            RegisterClient("Your WATS instance url", "username", "password/token");
+            InitializeAPI(true);
+        }
+
+        [TestMethod]
         public void TestGenericXSPCConverter()
         {
             InitializeAPI(true);
