@@ -88,7 +88,7 @@ namespace StepWize
                     currentStep = sequence.AddGenericStep(GenericStepTypes.Action, step.Element("subItemName").Value);
                 }
                 else throw new ApplicationException($"Invalid dataType {step.Element("dataType").Value}");
-                currentStep.Status = step.Element("stepOutcome").Value == "Pass" ? StepStatusType.Passed : StepStatusType.Failed; //More?
+                currentStep.Status = step.Element("stepOutcome").Value == "Pass" ? StepStatusType.Passed : StepStatusType.Failed;
                 DateTime stepStart = DateTime.ParseExact(step.Element("startDateTime").Value, "yyyy-MM-ddTHH:mm:ss.fff", CultureInfo.InvariantCulture);
                 stepEnd = DateTime.ParseExact(step.Element("endDateTime").Value, "yyyy-MM-ddTHH:mm:ss.fff", CultureInfo.InvariantCulture);
                 currentStep.StepTime = (stepEnd - stepStart).TotalSeconds;
