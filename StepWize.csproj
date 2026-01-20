@@ -66,7 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Data\20190516_133653_CONFIG_AND_RESULTS.XSPC">
+    <None Include="Data\20250316_133653_CONFIG_AND_RESULTS.XSPC">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
